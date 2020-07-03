@@ -2,20 +2,23 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Image1 from "../components/image1"
+import Image2 from "../components/image2"
+import Image3 from "../components/image3"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="above-the-fold">
+      <Image1 />
+      <h1>This is an example of Gatsby Image being used above the fold</h1>
+      <p>
+        All the images on this page use Gatsby Image, which causes a longer
+        largest contentful load time.
+      </p>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    <Image2 />
+    <Image3 />
+    <Link to="/alternate/">Go to example of plain image above fold</Link> <br />
   </Layout>
 )
 
