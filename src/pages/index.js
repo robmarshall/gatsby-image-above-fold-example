@@ -18,7 +18,8 @@ const IndexPage = () => (
     </div>
     <Image2 />
     <Image3 />
-    <Link to="/alternate/">Go to example of plain image above fold</Link> <br />
+    <Link to="/alternate/">Example of plain image above fold</Link> <br />
+    <Link to="/base64/">Example of base64 image above fold</Link> <br />
   </Layout>
 )
 
