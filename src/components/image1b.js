@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -19,7 +18,7 @@ const Image1b = () => {
       placeholderImage: file(relativePath: { eq: "sunset.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -27,11 +26,23 @@ const Image1b = () => {
   `)
 
   return (
-    <Img
-      fluid={data.placeholderImage.childImageSharp.fluid}
-      loading="eager"
-      fadeIn="false"
-    />
+    <picture>
+      <source
+        type="image/webp"
+        srcset={data.placeholderImage.childImageSharp.fluid.srcSetWebp}
+        sizes={data.placeholderImage.childImageSharp.fluid.sizes}
+      />
+      <source
+        srcset={data.placeholderImage.childImageSharp.fluid.srcSet}
+        sizes={data.placeholderImage.childImageSharp.fluid.sizes}
+      />
+      <img
+        sizes={data.placeholderImage.childImageSharp.fluid.sizes}
+        srcset={data.placeholderImage.childImageSharp.fluid.srcSet}
+        src={data.placeholderImage.childImageSharp.fluid.src}
+        alt=""
+      />
+    </picture>
   )
 }
 
