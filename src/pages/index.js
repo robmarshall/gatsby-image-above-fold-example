@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Image1 from "../components/image1"
-import Image2 from "../components/image2"
-import Image3 from "../components/image3"
+import Layout from "../components/layout";
+import Image1 from "../components/image1";
+import Image2 from "../components/image2";
+import Image3 from "../components/image3";
 
 const IndexPage = () => (
   <Layout>
@@ -20,7 +20,11 @@ const IndexPage = () => (
     <Image3 />
     <Link to="/alternate/">Example of plain image above fold</Link> <br />
     <Link to="/base64/">Example of base64 image above fold</Link> <br />
+    <Link to="/gatsby-plugin-image/">
+      Example of Gatsby-Plugin-Image above fold
+    </Link>{" "}
+    <br />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
