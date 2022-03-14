@@ -11,7 +11,9 @@ const SecondPage = () => (
   <Layout>
     <div className="above-the-fold">
       <Image1d />
-      <h1>This is an example of the Gatsby Plugin Image static image.</h1>
+      <h1>
+        This is an example of the Gatsby Plugin Image StaticImage component.
+      </h1>
       <p>All other images on this page use Gatsby Image.</p>
     </div>
     <Image2 />
